@@ -1,0 +1,1 @@
+dotnet test -s .runsettings -- RunConfiguration.remoteWebDriverUrl="http://selenium-hub:4444/wd/hub"
