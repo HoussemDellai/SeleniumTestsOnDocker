@@ -10,6 +10,8 @@ services:
   chrome:
     image: selenium/node-chrome-debug:3.141.59-yttrium
     container_name: chrome
+    deploy:
+      replicas: 2
     ports:
       - "5900:5900"
     volumes:
@@ -22,6 +24,8 @@ services:
   firefox:
     image: selenium/node-firefox:3.141.59-yttrium
     container_name: firefox
+    deploy:
+      replicas: 3
     volumes:
       - /dev/shm:/dev/shm
     depends_on:
